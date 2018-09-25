@@ -4,6 +4,6 @@ Bindings for liquid-dsp in Go. Assumes `-lliquid` (liquid-dsp) is already instal
 
 ## Status
 
-WIP. Only FEC implemented ATM.
+WIP. Only AGC (partial), FEC, FIRFilt implemented ATM.
 
 PRs welcome for missing bindings!
