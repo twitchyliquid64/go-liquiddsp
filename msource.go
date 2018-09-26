@@ -67,6 +67,7 @@ func (ms *MultiSource) NoiseSignal(bandwidth float32) (*MultiSourceFeature, erro
 }
 
 // GetSamples generates and returns the requested number of samples.
+// Outputs in terms of the normalized frequency (freq of signal / sample freq)
 func (ms *MultiSource) GetSamples(buffSize int) []complex64 {
 	out := make([]complex64, buffSize)
 	C.msourcecf_write_samples(ms.ms, (*C.complexfloat)(&out[0]), C.uint(buffSize))
